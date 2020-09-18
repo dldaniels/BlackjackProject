@@ -1,6 +1,6 @@
-#Blackjack project
+# Blackjack project
 
-##Topics
+## Topics
 
 ## Lessons Learned
 
