@@ -9,7 +9,6 @@ public class Player {
 	}
 
 	public Player(String name) {
-		super();
 		this.name = name;
 	}
 
