@@ -16,6 +16,10 @@ public class Deck {
 		}
 	}
 	
+	public int cardsLeftInDeck() {
+		return cards.size();
+	}
+	
 	public int checkDeckSize() {
 		return cards.size();
 	}
@@ -24,6 +28,15 @@ public class Deck {
 		return cards.remove(0);
 	
 	}	
+	
+	public void dealHand(Hand hand) {
+		
+		Card dealCard = cards.remove(0);
+		hand.addCard(dealCard);
+		cards.remove(0);
+		hand.addCard(dealCard);
+		
+	}
 	
 	public void shuffle() {
 		Collections.shuffle(cards);
