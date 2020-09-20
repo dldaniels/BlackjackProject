@@ -1,17 +1,18 @@
 package com.skilldistillery.common.things;
 
 public class Player {
-	
 	private String name;
-	
+
+	//player constructors
 	public Player() {
-		
+
 	}
 
 	public Player(String name) {
 		this.name = name;
 	}
-
+	
+	//getters and setters
 	public String getName() {
 		return name;
 	}
@@ -20,6 +21,7 @@ public class Player {
 		this.name = name;
 	}
 
+	//hashCode and equals
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -43,6 +45,7 @@ public class Player {
 		return true;
 	}
 
+	//to string
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -51,8 +54,5 @@ public class Player {
 		builder.append("]");
 		return builder.toString();
 	}
-	
-	
-	
 
 }

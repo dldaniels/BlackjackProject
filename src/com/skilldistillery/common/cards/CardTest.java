@@ -12,16 +12,16 @@ public class CardTest {
 //		for (Suit s : Suit.values()) {
 //			System.out.println(s);
 //		}
-		
+
 		Deck deck = new Deck();
 		deck.shuffle();
-		
+
 		Scanner kb = new Scanner(System.in);
 		System.out.println("How many cards?");
-		
+
 		try {
 			int num = kb.nextInt();
-			
+
 			if (num > deck.checkDeckSize()) {
 				System.out.println("Too many cards");
 			} else {

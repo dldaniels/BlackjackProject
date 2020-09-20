@@ -4,21 +4,18 @@ public class Card {
 	private Suit suit;
 	private Rank rank;
 
+	// Constructor to build card with assigned rank and suit
 	public Card(Suit suit, Rank rank) {
-		super();
 		this.suit = suit;
 		this.rank = rank;
 	}
 
-	@Override
-	public String toString() {
-		return rank + " of " + suit;
-	}
-
+	// get card value
 	public int getValue() {
 		return rank.getValue();
 	}
 
+	// hasCode and equals
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -40,5 +37,11 @@ public class Card {
 		if (suit != other.suit)
 			return false;
 		return true;
+	}
+
+	// card to string
+	@Override
+	public String toString() {
+		return rank + " of " + suit;
 	}
 }

@@ -6,8 +6,7 @@ public class Casino {
 	private String name;
 	private String location;
 	private BlackjackDealer dealer;
-	
-	
+
 	public Casino(String name, String location) {
 		super();
 		this.name = name;
@@ -15,36 +14,29 @@ public class Casino {
 		BlackjackDealer dealer = new BlackjackDealer();
 	}
 
-
 	public String getName() {
 		return name;
 	}
-
 
 	public void setName(String name) {
 		this.name = name;
 	}
 
-
 	public String getLocation() {
 		return location;
 	}
-
 
 	public void setLocation(String location) {
 		this.location = location;
 	}
 
-
 	public BlackjackDealer getDealer() {
 		return dealer;
 	}
 
-
 	public void setDealer(BlackjackDealer dealer) {
 		this.dealer = dealer;
 	}
-
 
 	@Override
 	public int hashCode() {
@@ -55,7 +47,6 @@ public class Casino {
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -82,7 +73,6 @@ public class Casino {
 		return true;
 	}
 
-
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -95,8 +85,5 @@ public class Casino {
 		builder.append("]");
 		return builder.toString();
 	}
-
-	
-	
 
 }

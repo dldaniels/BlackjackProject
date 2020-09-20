@@ -1,12 +1,10 @@
 package com.skilldistillery.blackjack;
 
-
 import java.util.Scanner;
 
 import com.skilldistillery.common.cards.Deck;
 
 public class BlackjackTable {
-	
 
 	public static void main(String[] args) {
 //		Scanner kb = new Scanner(System.in);

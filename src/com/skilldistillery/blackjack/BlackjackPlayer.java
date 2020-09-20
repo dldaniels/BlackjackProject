@@ -11,7 +11,7 @@ public class BlackjackPlayer extends Player{
 	BlackjackHand playerHand = new BlackjackHand();
 	
 	public BlackjackPlayer() {
-		super.setName("Player");
+		super.setName("Player 1");
 	}
 	
 	public int getHand() {
