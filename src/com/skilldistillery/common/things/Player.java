@@ -3,7 +3,7 @@ package com.skilldistillery.common.things;
 public class Player {
 	private String name;
 
-	//player constructors
+	// player constructors
 	public Player() {
 
 	}
@@ -11,8 +11,8 @@ public class Player {
 	public Player(String name) {
 		this.name = name;
 	}
-	
-	//getters and setters
+
+	// getters and setters
 	public String getName() {
 		return name;
 	}
@@ -21,7 +21,7 @@ public class Player {
 		this.name = name;
 	}
 
-	//hashCode and equals
+	// hashCode and equals
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -45,7 +45,7 @@ public class Player {
 		return true;
 	}
 
-	//to string
+	// to string
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();

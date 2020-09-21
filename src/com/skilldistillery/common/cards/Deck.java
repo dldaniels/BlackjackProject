@@ -29,16 +29,9 @@ public class Deck {
 
 	}
 
-	// method to deal hand
-	public void dealHand(Hand hand) {
-		Card dealCard = cards.remove(0);
-		hand.addCard(dealCard);
-	}
-
 	// method to shuffle deck
 	public void shuffle() {
 		Collections.shuffle(cards);
-
 	}
 
 	// method to check deck size
