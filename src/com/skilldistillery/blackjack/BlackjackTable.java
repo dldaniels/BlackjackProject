@@ -46,28 +46,6 @@ public class BlackjackTable {
 		}
 	}
 
-	// Option for player to hit or stay
-	private void hitOrStay() {
-		System.out.println("Enter H to hit");
-		System.out.println("Enter S to stay");
-		String choice = kb.next();
-
-		switch (choice) {
-		case "H":
-		case "h":
-			playerHit();
-			break;
-		case "S":
-		case "s":
-			playerStay();
-			break;
-		default:
-			System.out.println("I have given you two options. Pick one of em, lets not be difficult here dude");
-			choice = kb.next();
-			break;
-
-		}
-	}
 
 	// method for what happens when user choice is to stay
 	private void playerStay() {
@@ -78,12 +56,13 @@ public class BlackjackTable {
 		if (dealer.getHandValue() >= 17) {
 			System.out.println("Dealer hand value: " + dealer.getHandValue());
 			System.out.println("\nDealer must stay\n");
+			winner();
 		} else if (dealer.getHandValue() <= 16) {
 			dealerHit();
 		}
 		if (player.getHandValue() <= 21 && dealer.getHandValue() < 17) {
 			dealerHit();
-			dealer.isBust();
+			isBust();
 			continuePlay();
 
 			// } else if (dealer.getHandValue() > 16 && dealer.getHandValue() < 21) {
@@ -108,7 +87,6 @@ public class BlackjackTable {
 		case "N":
 		case "n":
 			System.out.println("Dealer: Thanks for playing, come back soon!");
-			exit();
 			break;
 		default:
 			System.out.println("Come on now....it is either Y or N. Try and play along here");
@@ -126,15 +104,9 @@ public class BlackjackTable {
 			}
 	}
 
-	// if (player.isBust() == true || dealer.isBust() == true) {
-	// continuePlay();
-	// }
-	// player.isBlackJack();
-	// dealer.isBlackjack();
+	
 
 	private void isBust() {
-		// player.isBust();
-		// dealer.isBust();
 		if (player.isBust() == true || dealer.isBust() == true) {
 			continuePlay();
 		}
@@ -149,7 +121,7 @@ public class BlackjackTable {
 			hitOrStay();
 		}
 		winner();
-		// continuePlay();
+	
 
 	}
 
@@ -173,17 +145,19 @@ public class BlackjackTable {
 			dealer.showDealersHand();
 			player.getPlayerHand();
 			System.out.println("Thats a Push!\n");
-
+			continuePlay();
 		}
 		if (player.getHandValue() > dealer.getHandValue() || dealer.getHandValue() > 21) {
 			dealer.showDealersHand();
 			player.getPlayerHand();
 			System.out.println("Player wins!!! ");
+			continuePlay();
 		}
 		if (player.getHandValue() < dealer.getHandValue() || player.getHandValue() > 21) {
 			dealer.showDealersHand();
 			player.getPlayerHand();
 			System.out.println("Dealer wins!");
+			continuePlay();
 
 		}
 		continuePlay();
@@ -204,11 +178,7 @@ public class BlackjackTable {
 
 	}
 
-	// exit
-	private void exit() {
-		System.out.println("Later holmes");
 
-	}
 
 //Player walks up to table to start a game of blackjack
 //welcome to the game
@@ -235,6 +205,28 @@ public class BlackjackTable {
 			System.out.println("Dealer: I gave you two choices. It is either Y or N. Lets not be difficult here");
 			choice = kb.next();
 			break;
+		}
+	}
+	// Option for player to hit or stay
+	private void hitOrStay() {
+		System.out.println("Enter H to hit");
+		System.out.println("Enter S to stay");
+		String choice = kb.next();
+		
+		switch (choice) {
+		case "H":
+		case "h":
+			playerHit();
+			break;
+		case "S":
+		case "s":
+			playerStay();
+			break;
+		default:
+			System.out.println("I have given you two options. Pick one of em, lets not be difficult here dude");
+			choice = kb.next();
+			break;
+			
 		}
 	}
 }
