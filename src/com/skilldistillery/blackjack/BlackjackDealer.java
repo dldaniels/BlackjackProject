@@ -25,6 +25,8 @@ public class BlackjackDealer extends Player {
 		Collections.shuffle(deck);
 
 	}
+	
+	
 
 	// add card to hand
 	public void addCard(Card card) {

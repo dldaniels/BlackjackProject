@@ -86,9 +86,9 @@ public class BlackjackTable {
 			dealer.isBust();
 			continuePlay();
 
-	//	} else if (dealer.getHandValue() > 16 && dealer.getHandValue() < 21) {
-	//		player.isBust();
-	//		checkWin();
+			// } else if (dealer.getHandValue() > 16 && dealer.getHandValue() < 21) {
+			// player.isBust();
+			// checkWin();
 		}
 
 	}
@@ -122,25 +122,19 @@ public class BlackjackTable {
 			System.out.println("You and Dealer both have Blackjack! Thats a push!");
 			continuePlay();
 		}
-//		 else if (player.isBlackJack() == true || dealer.isBlackjack() == true) { 
-//			
-//		}
+		 else if (player.isBlackJack() == true || dealer.isBlackjack() == true) { 
+			}
 	}
-			
-	//		if (player.isBust() == true || dealer.isBust() == true) {
-		//		continuePlay();
-		//	}
-		//	player.isBlackJack();
-		//	dealer.isBlackjack();
-			
-		
-	
 
-
+	// if (player.isBust() == true || dealer.isBust() == true) {
+	// continuePlay();
+	// }
+	// player.isBlackJack();
+	// dealer.isBlackjack();
 
 	private void isBust() {
-	//	player.isBust();
-	//	dealer.isBust();
+		// player.isBust();
+		// dealer.isBust();
 		if (player.isBust() == true || dealer.isBust() == true) {
 			continuePlay();
 		}
@@ -155,7 +149,7 @@ public class BlackjackTable {
 			hitOrStay();
 		}
 		winner();
-	//	continuePlay();
+		// continuePlay();
 
 	}
 
@@ -204,7 +198,7 @@ public class BlackjackTable {
 		if (dealer.getDeckSize() < 10) {
 			System.out.println();
 			System.out.println("Shuffling new deck");
-			deck = new Deck();
+			Deck deck = new Deck();
 			dealer.dealerShuffle(deck);
 		}
 
